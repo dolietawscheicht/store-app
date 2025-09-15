@@ -1,9 +1,10 @@
 <header class='flex justify-end items-center gap-5'>
-	<x-link href='#'>Корзина</x-link>
 	@guest
-		<x-button>Войти</x-button>
+		<x-link href="{{ route('auth.signup-form') }}">Регистрация</x-link>
+		<x-link href="{{ route('auth.login-form') }}">Войти</x-link>
 	@endguest
 	@auth
-		<x-link>Профиль</x-link>
+		<x-link href="#">Корзина</x-link>
+		<x-link href="{{ route('auth.logout') }}">Выйти</x-link>
 	@endauth
 </header>
