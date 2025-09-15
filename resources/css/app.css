@@ -11,3 +11,7 @@
 .active {
 	@apply text-sky-800;
 }
+
+.page-h {
+	@apply font-bold text-3xl;
+}

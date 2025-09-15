@@ -7,7 +7,7 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class='p-2 max-w-6xl mx-auto bg-stone-100 text-neutral-900'>
-		<main>
+		<main class='grid gap-5'>
 			@yield('main')
 		</main>
     </body>

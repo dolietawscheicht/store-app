@@ -13,7 +13,7 @@ class MainPageController extends Controller
 		private ProductService $productService,
 	) {}
 
-	public function index(?Category $category = null)
+	public function __invoke(?Category $category = null)
 	{
 		$categories = $this->categoryService->getAll();
 
@@ -22,6 +22,6 @@ class MainPageController extends Controller
 			? $this->productService->paginateByCategoryId($category->id)
 			: $this->productService->paginateByNewest();
 
-		return view('pages.catalog', compact('categories', 'categoryName', 'products'));
+		return view('catalog', compact('categories', 'categoryName', 'products'));
 	}
 }
