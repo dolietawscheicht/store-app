@@ -20,7 +20,7 @@ class ProductFactory extends Factory
 		return [
 			'name' => fake()->word(),
 			'description' => fake()->text(),
-			'previewUrl' => 'https://placehold.net/600x600.png',
+			'previewUrl' => 'https://placehold.net/' . rand(1, 10) . '.png',
 			'price' => fake()->numberBetween(10000, 100000),
 			'releaseYear' => fake()->year(),
 			'country' => fake()->country(),

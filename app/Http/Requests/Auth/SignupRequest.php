@@ -22,8 +22,8 @@ class SignupRequest extends FormRequest
 	public function rules(): array
 	{
 		return [
-			'email' => ['required', 'email', 'unique:users,email', 'max:255'],
-			'password' => ['required', 'string', 'min:8'],
+			'email' => ['required', 'email', 'unique:users,email'],
+			'password' => ['required', 'min:8'],
 		];
 	}
 
@@ -38,10 +38,8 @@ class SignupRequest extends FormRequest
 			'email.required' => 'Поле "Email" обязательно для заполнения',
 			'email.email' => 'Введите корректный email адрес',
 			'email.unique' => 'Пользователь с таким email уже существует',
-			'email.max' => 'Email не должен превышать 255 символов',
 
 			'password.required' => 'Поле "Пароль" обязательно для заполнения',
-			'password.string' => 'Пароль должен быть строкой',
 			'password.min' => 'Пароль должен содержать минимум 8 символов',
 		];
 	}

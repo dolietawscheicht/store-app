@@ -1,5 +1,4 @@
 import "./bootstrap";
-
 // import { cart } from "./cart";
 
 // const addToCartForm = document.getElementById("add-to-cart-form");

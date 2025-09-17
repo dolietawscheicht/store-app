@@ -9,4 +9,5 @@
             </x-link>
         @endforeach
     </nav>
-</details>
+</details> 
+

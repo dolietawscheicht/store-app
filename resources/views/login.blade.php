@@ -10,7 +10,7 @@
 		<h1 class='page-h'>Вход</h1>
 
 		<fieldset class='grid gap-1'>
-			<x-input name='email' placeholder='E-mail' />
+			<x-input name='email' placeholder='E-mail' value="{{ old('email') }}"/>
 			@error('email')
 				<small class='text-orange-500'>{{ $message }}</small>
 			@enderror
